@@ -20,3 +20,24 @@ const isPalindrome = (string) => {
 };
 const result2 = isPalindrome("Ma dam");
 console.log("Is Palindrome-> ", result2);
+
+// ! Problem 3 -> Remove duplicates from array (multiple ways)
+const arr1 = [1, 1, 2, 3, 3, 4, 5];
+const RemoveDuplicatesWay1 = (arr) => {
+  const uniqueArr = [...new Set(arr)];
+  return uniqueArr;
+};
+const result3Way1 = RemoveDuplicatesWay1(arr1);
+
+const RemoveDuplicatesWay2 = (arr) => {
+  const uniqueArr = [];
+  for (const number of arr) {
+    if (!uniqueArr.includes(number)) {
+      uniqueArr.push(number);
+    }
+  }
+  return uniqueArr;
+};
+const result3Way2 = RemoveDuplicatesWay2(arr1);
+console.log("Removed duplicates way 1 -> ", result3Way1);
+console.log("Removed duplicates way 2 -> ", result3Way2);
