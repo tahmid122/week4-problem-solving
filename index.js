@@ -7,7 +7,7 @@ const reverseString = (string) => {
 const result1 = reverseString("Tahmid");
 console.log("Reverse a string-> ", result1);
 
-// ! Problem 02 -> Check if string is palindrome (ignore case, spaces, punctuation)
+//! Problem 02 -> Check if string is palindrome (ignore case, spaces, punctuation)
 
 const isPalindrome = (string) => {
   const reverseString = string.split("").reverse().join("");
@@ -21,7 +21,7 @@ const isPalindrome = (string) => {
 const result2 = isPalindrome("Ma dam");
 console.log("Is Palindrome-> ", result2);
 
-// ! Problem 3 -> Remove duplicates from array (multiple ways)
+//! Problem 3 -> Remove duplicates from array (multiple ways)
 const arr1 = [1, 1, 2, 3, 3, 4, 5];
 const RemoveDuplicatesWay1 = (arr) => {
   const uniqueArr = [...new Set(arr)];
@@ -41,3 +41,18 @@ const RemoveDuplicatesWay2 = (arr) => {
 const result3Way2 = RemoveDuplicatesWay2(arr1);
 console.log("Removed duplicates way 1 -> ", result3Way1);
 console.log("Removed duplicates way 2 -> ", result3Way2);
+
+//! Problem 4 -> Find the longest word in a sentence
+
+const findTheLongestWord = (sentence) => {
+  let longestWord = "";
+  const splitIntoArray = sentence.trim().split(" ");
+  for (const word of splitIntoArray) {
+    if (word.length > longestWord.length) {
+      longestWord = word;
+    }
+  }
+  return longestWord;
+};
+const result4 = findTheLongestWord("I love you medha");
+console.log("Longest word -> ", result4);
