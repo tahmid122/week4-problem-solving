@@ -56,3 +56,18 @@ const findTheLongestWord = (sentence) => {
 };
 const result4 = findTheLongestWord("I love you medha");
 console.log("Longest word -> ", result4);
+
+//! Problem 5 -> Capitalize first letter of each word
+
+const capitalizeFirstLetter = (sentence) => {
+  const splitIntoArray = sentence.trim().split(" ");
+  const newArr = [];
+  for (const word of splitIntoArray) {
+    const capitalize = word[0].toUpperCase() + word.slice(1);
+    newArr.push(capitalize);
+  }
+  const finalCapitalize = newArr.join(" ");
+  return finalCapitalize;
+};
+const result5 = capitalizeFirstLetter("i love you medha");
+console.log("Capitalize first letter of each word -> ", result5);
