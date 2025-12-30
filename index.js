@@ -71,3 +71,28 @@ const capitalizeFirstLetter = (sentence) => {
 };
 const result5 = capitalizeFirstLetter("i love you medha");
 console.log("Capitalize first letter of each word -> ", result5);
+
+//! Problem 06 -> Find most frequent character in string
+const frequentCharacter = (string) => {
+  return "Unable to solved";
+};
+const result6 = frequentCharacter("abbc");
+console.log("Most frequent character -> ", result6);
+
+//! Problem 08 -> Check if two strings are anagrams
+const checkAnagrams = (str1, str2) => {
+  return str1.split("").sort().join("") === str2.split("").sort().join("");
+};
+const result8 = checkAnagrams("save", "vase");
+console.log("Check anagrams -> ", result8);
+
+//! Problem 09 -> Implement custom trim() function
+const customTrim = (string) => {
+  let start = 0;
+  let end = string.length - 1;
+  while (string[start] === " ") start++;
+  while (string[end] === " ") end--;
+  return string.slice(start, end + 1);
+};
+const result9 = customTrim("   Hello world   ");
+console.log("Custom trim ->", result9);
